@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: #111;
+            padding: 24px 32px;
+            width: 230px;
+            transition: all 0.5s ease;
+            z-index: 2500;
+            display: flex;
+            align-items: center;
+        }
+
+        .hiddenNav {
+            padding: 10px;
+            display: none;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1506;
+            background-color: #111;
+            color: white;
+        }
+
+        .hiddenNav img {
+            cursor: pointer;
+        }
+
+        .hiddenNav>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .toggleSidebar.sidebar {
+            left: 0;
+            display: block;
+        }
+
+        .sidebar li {
+            position: relative;
+            list-style: none;
+        }
+
+        .sidebar a {
+            line-height: 3rem;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        .sidebar a:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffb03a;
+            transform-origin: bottom right;
+            transition: all 0.5s ease;
+        }
+
+        .sidebar a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .sidebar-footer {
+            position: absolute;
+            color: #888888;
+            bottom: 3%;
+            font-weight: 300;
+            text-align: center;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        /* Home */
+
+        .main-img-wrapper {
+            position: relative;
+        }
+
+
+        .main-img-text img {
+            width: 100%;
+            height: 100vh;
+            display: block;
+            object-fit: cover;
+        }
+
+        .main-img-text::after {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.4;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+        }
+
+        .main-img-content {
+            color: white;
+            z-index: 1500;
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            font-size: 3.33rem;
+
+        }
+
+        .main-img-text h2 {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .main-img-job-title {
+            border-top: 1px solid #d4d4d4;
+            border-bottom: 1px solid #d4d4d4;
+            color: #d4d4d4;
+            margin-top: 1rem;
+            padding: 10px;
+            font-size: 1.77rem;
+            border-radius: 2px;
+
+        }
+
+        .main-img-text a {
+            background: transparent;
+            border: 3px solid #FFB03A;
+            color: #FFB03A;
+            text-transform: uppercase;
+            padding: 12px 48px;
+            text-align: center;
+            font-size: 1rem;
+            outline: none;
+            box-shadow: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all linear 0.3s;
+            text-decoration: none;
+        }
+
+        .main-img-text a:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* About */
+
+        .about-me-wrapper h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #FFB03A;
+            padding: 6px 0px;
+            width: fit-content;
+        }
+
+        .wrapper {
+            transition: all 0.5s ease;
+            width: calc(100% - 230px);
+            margin-left: auto;
+        }
+
+        .about-me-wrapper {
+            min-height: 100vh;
+            max-width: 80%;
+            margin: 3rem auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .about-me-wrapper-1 {
+            display: flex;
+            margin-top: 2.5rem;
+        }
+
+        .avatar-img {
+            border: 3px solid #FFB03A;
+            object-fit: cover;
+            width: 50%;
+           
+        }
+
+        .about-me-info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2.5rem;
+
+        }
+
+        .about-me-info p {
+            font-weight: 600;
+            font-size: 1.5rem;
+            /* text-transform: uppercase; */
+            margin-bottom: 2rem;
+        }
+
+        .about-me-info img {
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .about-me-info span {
+            font-weight: 300;
+            font-size: 1.1rem;
+            text-transform: none;
+        }
+
+        .download-btn {
+            margin: 15px 0px;
+            display: block;
+            width: 50%;
+            padding: 15px 0px;
+            color: #fff;
+            background: #FFB03A;
+            border: 3px solid #FFB03A;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+            transition: all 0.5s ease;
+            border-radius: 2px;
+            outline: none;
+            font-weight: 600;
+        }
+
+        .download-btn:hover {
+            background: #fff;
+            border-color: #fff;
+            color: #333;
+        }
+
+
+        .about-me-pitch {
+            width: 50%;
+            margin: 1.5rem 0 1.5rem 0;
+            line-height: 1.5;
+        }
+
+        .about-me-pitch h3 {
+            font-size: 2rem;
+            letter-spacing: 0.1rem;
+            margin: 1rem 0 1rem 0;
+        }
+
+        .about-me-pitch h4 {
+            font-size: 1.5rem;
+            color: #ffb03a;
+            letter-spacing: 0.1rem;
+
+        }
+
+        /* Skills */
+
+        .skills-wrapper {
+            min-height: 100vh;
+            width: 100%;
+            max-width: 80%;
+            margin: auto;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .grey-section {
+            background-color: #f7f7f7;
+        }
+
+        .skills-wrapper h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #FFB03A;
+            padding: 6px 0px;
+            width: fit-content;
+            margin-top: 2rem;
+            letter-spacing: 0.1rem;
+            padding-top: 2rem;
+        }
+
+        .skills-wrapper p {
+            margin-top: 2rem;
+        }
+
+        .skills-slideshow {
+            border-top: 1px solid #e5e7f2;
+            border-bottom: 1px solid #e5e7f2;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+
+            position: relative;
+            overflow: hidden;
+            width: 75%;
+            margin-top: 2rem;
+
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-400%);
+            }
+        }
+
+
+        .skills-slideshow img {
+            animation: move 10s linear infinite;
+            flex: 0 0 auto;
+            object-fit: cover;
+            margin: 25px;
+            overflow: hidden;
+            width: 100px;
+        }
+
+        .skills-desc {
+            max-width: 75%;
+        }
+
+        .cta-btn {
+            width: fit-content;
+            margin-top: 2rem;
+            padding: 15px 31px;
+            display: block;
+            border-radius: 2em;
+            color: #fff;
+            background: #FFB03A;
+            border: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+            transition: all 0.5s ease;
+            outline: none;
+            font-weight: 600;
+            transition: all linear 0.3s;
+            text-decoration: none;
+        }
+
+        .cta-btn:hover {
+            background: #ffba3a;
+        }
+
+        /* Projects */
+
+        .projects-wrapper {
+            min-height: 100vh;
+            width: 100%;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .projects-wrapper h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #FFB03A;
+            padding: 6px 0px;
+            width: fit-content;
+            margin-top: 2rem;
+            letter-spacing: 0.1rem;
+            padding-top: 2rem;
+        }
+
+        .projects-container {
+            display: flex;
+            margin-top: 2rem;
+        }
+
+        .projects-container>div {
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin-right: 3%;
+            text-align: center;
+        }
+
+        .projects-container img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .projects-container h3 {
+            letter-spacing: 0.1rem;
+            text-underline-offset: 0.4rem;
+            text-decoration: underline;
+        }
+
+
+        .projects-container p {
+            margin-top: 0.5rem;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            border-bottom: 1px solid #e5e7f2;
+        }
+
+        .git-link {
+            width: 40px !important;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+
+        .demo-link {
+            text-decoration: none;
+            background-color: #ffb03a;
+            color: white;
+            padding: 11px 16px;
+            border-radius: 2em;
+            border: none;
+            margin-right: 1rem;
+            transition: all linear 0.3s;
+        }
+
+        .demo-link:hover {
+            background: #ffba3a;
+        }
+
+        .project-links-container {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .project-1 {
+            position: relative;
+        }
+
+        .project-tech {
+            position: absolute;
+            top: 30%;
+            left: -20px;
+        }
+
+        .project-tech-1 {
+            width: 34px !important;
+            position: absolute;
+            top: 40%;
+            left: -17px;
+        }
+
+        .project-tech-2 {
+            width: 40px !important;
+            position: absolute;
+            top: 50%;
+            left: -20px;
+        }
+
+        .project-tech-3 {
+            width: 50px !important;
+            position: absolute;
+            top: 60%;
+            left: -25px;
+        }
+
+        .project-tech-4 {
+            position: absolute;
+            top: 70%;
+            left: -15px;
+        }
+
+        /* Contact */
+        .contact-wrapper {
+
+            width: 100%;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .contact-wrapper h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #FFB03A;
+            padding: 2px 0px;
+            width: fit-content;
+            margin-top: 2rem;
+            letter-spacing: 0.1rem;
+            padding-top: 2rem;
+        }
+
+        .contact-wrapper p {
+            margin-top: 0.5rem;
+        }
+
+        .contact-wrapper h3 {
+            margin-top: 2rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+        }
+
+        .contact-form input {
+            width: 100%;
+            margin-bottom: 16px;
+            padding: 15px;
+            border: 2px solid #D4D4D4;
+            border-radius: 2px;
+            transition: all 0.5s ease;
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 2px solid #FFB03A;
+        }
+
+        .contact-form textarea {
+            width: 100%;
+            min-height: 190px;
+            resize: none;
+            padding: 15px;
+            border: 2px solid #D4D4D4;
+            border-radius: 2px;
+            outline: none;
+            transition: all 0.5s ease;
+        }
+
+        .contact-form button {
+            float: right !important;
+            text-transform: uppercase;
+            background: #FFB03A;
+            font-size: 1rem;
+            color: #fff;
+            border: none;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            line-height: 48px;
+            font-weight: bold;
+            margin-left: auto;
+            margin-top: 2rem;
+            cursor: pointer;
+            width: 30%;
+        }
+
+        .contact-form button:hover {
+            background-color: #ffba3a;
+        }
+
+        .contact-form-container {
+            display: flex;
+            margin-top: 2rem;
+        }
+
+        .conact-form-icon {
+            width: 40%;
+        }
+
+        .contact-email-icon {
+            display: flex;
+        }
+
+        .contact-email-icon div {
+            padding-bottom: 25px;
+            margin-left: 1rem;
+        }
+
+        .social-data img {
+            margin-top: 1rem;
+        }
+
+        .social-data img:hover {
+            filter: invert(25%) sepia(36%) saturate(4712%) hue-rotate(181deg) brightness(103%) contrast(101%);
+        }
+
+        .grey-section-1 {
+            display: flex;
+            align-items: center;
+            background-color: #f7f7f7;
+            min-height: 100vh;
+        }
+
+        .active-link.links {
+            color: #FFB03A;
+        }
+
+        .sql-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #157efb;
+            display: inline-block;
+            color: white;
+            border-radius: 50%;
+            /* font-weight: 600; */
+            font-size: 0.7rem;
+            line-height: 30px;
+        }
+
+        @media (max-width:1200px) {
+            .sidebar {
+                left: -230px;
+            }
+
+            .main-img-wrapper {
+                height: auto;
+            }
+
+            .main-img-text img {
+                min-height: 400px;
+                height: auto;
+            }
+
+            .hiddenNav {
+                display: block;
+            }
+
+            .main-img-content {
+                font-size: 100%;
+            }
+
+            .main-img-text a {
+                position: absolute;
+            }
+
+            .hire-me-btn {
+                margin-top: 2rem;
+            }
+
+            .wrapper {
+                width: auto;
+                margin: auto;
+            }
+
+            .about-me-wrapper-1 {
+                display: block;
+            }
+
+            .about-me-info {
+                margin: auto;
+                line-height: 2.5rem;
+            }
+
+            .about-me-pitch,
+            .contact-form {
+                width: 100%;
+            }
+
+            .avatar-img,
+            .download-btn {
+                width: 100%;
+            }
+
+            .projects-container {
+                display: block;
+            }
+
+            .projects-container>div {
+                width: 100%;
+                margin-top: 2rem;
+            }
+
+            .contact-form-container {
+                display: block;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><a class="links" href="#home">HOME</a></li>
+            <li><a class="links" href="#about">ABOUT ME</a></li>
+            <li><a class="links" href="#skills">SKILLS</a></li>
+            <li><a class="links" href="#projects">PROJECTS</a></li>
+            <li><a class="links" href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="sidebar-footer">
+            <p>&copy; Aristeidis Lamprinidis</p>
+            2022 all rights reserved
+        </div>
+    </div>
+    <div class="hiddenNav">
+        <div>
+            <h3>Aristeidis Lamprinidis</h3>
+            <img class="menu-icon" width="25px" src="./Images/menu.svg" alt="">
+        </div>
+    </div>
+    <div class="wrapper">
+        <div id="home" class="main-img-wrapper">
+            <div class="main-img-text">
+                <img class="main-img" src="./Images/pc2.jpg" alt="">
+                <div class="main-img-content">
+                    <p>HELLO, I'M</p>
+                    <h2>ARISTEIDIS</h2>
+                    <h2 style="color: #FFB03A">LAMPRINIDIS</h2>
+                    <div class="main-img-job-title">
+                        <h3>Web Developer</h3>
+                    </div>
+                    <a class="links hire-me-btn" href="#contact">Hire Me</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="about-me-wrapper">
+            <h2>About Me</h2>
+            <div class="about-me-wrapper-1">
+                <img class="avatar-img" src="./Images/face.jpg" alt="about-image">
+                <div class="about-me-info">
+                    <p>Name : <span>Aristeidis Lamprinidis</span></p>
+                    <p>Email : <span>arislamprinidis@yahoo.com
+                        </span></p>
+                    <p>Phone : <span>6937040151</span></p>
+                    <p>City : <span>Athens</span></p>
+                    <p>Github : <a target="_blank" href="https://github.com/zeromaxx"><img width="25px"
+                                src="./Images/github.svg" alt="github"></a></p>
+                    <p>LinkedIn : <a target="_blank" href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img
+                                width="25px" src="./Images/linkedin.svg" alt=""></a></p>
+                </div>
+            </div>
+            <div class="about-me-pitch">
+                <h4>Who am i?</h4>
+                <h3>I'm Aristeidis Lamprinidis, a FullStack Web Developer</h3>
+                <p>I am a full stack software developer based in Athens and i help organizations
+                    leverage software technologies by turning their ideas into well-developed solutions for their
+                    business problems. Take a look at my portfolio work and lets see if we can work together on your next project.</p>
+            </div>
+            <button class="download-btn">Download Resume as PDF</button>
+        </div>
+        <section class="grey-section">
+            <div id="skills" class="skills-wrapper">
+                <div class="skills-desc">
+                    <h2>Skills</h2>
+                    <p>I am a creative problem solver. I build fullstack web applications. I use C#, SQL, ASP.net, Javascript, React, Bootstrap, HTML, CSS and PHP. I have highlighted my key technical skills that i will bring to your project.</p>
+                </div>
+                <div class="skills-slideshow slider">
+                    <img src="./Images/html.svg" alt="html-icon">
+                    <img src="./Images/css.svg" alt="css-icon">
+                    <img src="./Images/js.svg" alt="js-icon">
+                    <img src="./Images/bootstrap.svg" alt="bootstrap-icon">
+                    <img src="./Images/jquery.svg" alt="jquery-icon">
+                    <img src="./Images/react.svg" alt="react-icon">
+                    <img src="./Images/c.png" alt="c-icon">
+                    <img src="./Images/sql.svg" alt="sql-icon">
+                    <img src="./Images/php.svg" alt="php-icon">
+                </div>
+                <a href="#projects" class="cta-btn links">Check Out My Projects</a>
+            </div>
+        </section>
+        <div id="projects" class="projects-wrapper">
+            <h2>My Projects</h2>
+            <p style="margin-top: 1rem;">Showcasing complete projects demonstrates what i can bring to your project.</p>
+            <div class="projects-container">
+                <div class="project-1">
+                    <img src="./Images/project-img.png" alt="project-img">
+                    <h3>CyberStore</h3>
+                    <p>An E Commerce application that consists of an e-shop
+                        and managing payments through Paypal API.</p>
+                    <div class="project-links-container">
+                        <a class="demo-link" href="">Visit Project</a>
+                        <img class="git-link" src="./Images/git-black.png" alt="github-img">
+                    </div>
+                    <img class="project-tech" style="width: 40px;" src="./Images/html.svg" alt="html-icon">
+                    <img class="project-tech-1" src="./Images/css.svg" alt="css-icon">
+                    <img class="project-tech-2" src="./Images/js.svg" alt="js-icon">
+                    <img class="project-tech-3" src="./Images/c.png" alt="c-icon">
+                    <span class="sql-icon project-tech-4">SQL</span>
+                </div>
+                <div>
+                    <img src="./Images/project-img.png" alt="">
+                </div>
+            </div>
+        </div>
+        <section class="grey-section-1">
+            <div id="contact" class="contact-wrapper">
+                <h2>CONTACT</h2>
+                <h3>LET'S KEEP IN TOUCH</h3>
+                <p>If you liked my work, send me an email.</p>
+                <div class="contact-form-container">
+                    <div class="conact-form-icon">
+                        <div class="contact-email-icon">
+                            <img width="50px" src="./Images/mail-envelope.svg" alt="">
+                            <div>
+                                <h3>EMAIL</h3>
+                                <span>arislamprinidis@yahoo.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-email-icon">
+                            <img width="50px" src="./Images/smartphone-outline.svg" alt="">
+                            <div>
+                                <h3>PHONE</h3>
+                                <span>6937040151</span>
+                            </div>
+                        </div>
+
+                        <div class="social-data">
+                            <h3>I′M IN THE SOCIAL NETWORKS</h3>
+                            <a target="_blank" href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/">
+                                <img width="40px" src="./Images/linkedin2.svg" alt="linkedin-icon">
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="">
+                        <input placeholder="Your name" type="text">
+                        <input placeholder="Your email" type="email">
+                        <textarea placeholder="Your message"></textarea>
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        // Scroll Links
+        const menuIcon = document.querySelector('.menu-icon');
+        const sidebar = document.querySelector('.sidebar');
+        const scrollLinks = document.querySelectorAll('.links');
+        const hireBtn = document.querySelector('.hire-me-btn');
+        const ctaBtn = document.querySelector('.cta-btn');
+
+        ctaBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const id = e.currentTarget.getAttribute('href').slice(1);
+            const element = document.getElementById(id);
+            let position = element.offsetTop
+
+            window.scrollTo({
+                left: 0,
+                top: position,
+            });
+        })
+
+
+        hireBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const id = e.currentTarget.getAttribute('href').slice(1);
+            const element = document.getElementById(id);
+            let position = element.offsetTop
+
+            window.scrollTo({
+                left: 0,
+                top: position,
+            });
+        })
+
+        sidebar.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const clicked = e.target.closest('.links');
+            if (!clicked) return;
+            scrollLinks.forEach(c => c.classList.remove('active-link'));
+            const id = clicked.getAttribute('href').slice(1);
+
+            if (clicked) {
+                clicked.classList.add('active-link');
+            }
+            const element = document.getElementById(id);
+            let position = element.offsetTop
+
+            window.scrollTo({
+                left: 0,
+                top: position,
+            });
+
+        })
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('toggleSidebar');
+
+        })
+
+    </script>
+</body>
+
+</html>
