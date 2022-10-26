@@ -830,10 +830,10 @@
                             </a>
                         </div>
                     </div>
-                    <form class="contact-form" action="">
-                        <input placeholder="Your name" type="text">
-                        <input placeholder="Your email" type="email">
-                        <textarea placeholder="Your message"></textarea>
+                    <form method="post" class="contact-form" action="send-email.php">
+                        <input placeholder="Your name" name="name" type="text">
+                        <input placeholder="Your email" name="email" type="email">
+                        <textarea name="message" placeholder="Your message"></textarea>
                         <button type="submit">SEND</button>
                     </form>
                 </div>
