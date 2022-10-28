@@ -303,7 +303,6 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
-
   position: relative;
   overflow: hidden;
   width: 75%;
@@ -331,6 +330,11 @@ body {
 
 .skills-desc {
   max-width: 75%;
+}
+@media (max-width:1200px) {
+  .skills-desc {
+  max-width: none;
+}
 }
 
 .cta-btn {
@@ -420,7 +424,7 @@ body {
   padding: 11px 16px;
   border-radius: 2em;
   border: none;
-  margin-right: 1rem;
+  min-width: 125px;
   transition: all linear 0.3s;
 }
 
@@ -431,7 +435,7 @@ body {
 .project-links-container {
   margin-top: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .project-1 {
@@ -471,6 +475,126 @@ body {
   left: -15px;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -10;
+}
+
+.project-info {
+  width: 70%;
+  font-size: 14px;
+}
+.project-info p,
+.project-info h3 {
+  margin-top: 0.5rem;
+}
+.project-info h1 {
+  border-bottom: 3px solid #ffb03a;
+  width: fit-content;
+  letter-spacing: 0.1rem;
+}
+
+.modal-container {
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-container-1 {
+  width: 75%;
+  display: flex;
+  height: 60%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: black;
+  cursor: pointer;
+  transition: all linear 0.3s;
+  font-size: 3rem;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 2700;
+}
+.slideshow-container {
+  width: 30%;
+  width: 100%;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.text {
+  text-align: center;
+}
+
+.mySlides img {
+  object-fit: contain;
+  max-height: 340px;
+  width: 100%;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@media (max-width: 1200px) {
+  .modal-container-1 {
+    display: block;
+    width: 90%;
+    height: 90%;
+  }
+  .mySlides img {
+  object-fit: contain;
+  max-height: 240px;
+  width: 100%;
+}
+.close-btn{
+  top: 0;
+  right: 1rem;
+}
+.project-info{
+  margin: auto;
+}
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Contact */
 .contact-wrapper {
   width: 100%;
@@ -586,6 +710,9 @@ body {
 }
 
 .active-link.links {
+  color: #ffb03a;
+}
+.active-link.scroll-active {
   color: #ffb03a;
 }
 

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/c93712fc6c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,7 +35,7 @@
         </div>
     </div>
     <div class="wrapper">
-        <div id="home" class="main-img-wrapper">
+        <div id="home" class="main-img-wrapper scroll-active">
             <div class="main-img-text">
                 <img class="main-img" src="./Images/pc2.jpg" alt="">
                 <div class="main-img-content">
@@ -49,7 +50,7 @@
             </div>
         </div>
 
-        <div id="about" class="about-me-wrapper">
+        <div id="about" class="about-me-wrapper scroll-active">
             <h2>About Me</h2>
             <div class="about-me-wrapper-1">
                 <img class="avatar-img" src="./Images/face.jpg" alt="about-image">
@@ -76,7 +77,7 @@
             <a href="test.pdf" download="Aristeidis-Lamprinidis-Resume" class="download-btn">Download Resume as PDF</a>
         </div>
         <section class="grey-section">
-            <div id="skills" class="skills-wrapper">
+            <div id="skills" class="skills-wrapper scroll-active">
                 <div class="skills-desc">
                     <h2>Skills</h2>
                     <p>I am a creative problem solver. I build fullstack web applications. I use C#, SQL, ASP.net,
@@ -97,18 +98,21 @@
                 <a href="#projects" class="cta-btn links">Check Out My Projects</a>
             </div>
         </section>
-        <div id="projects" class="projects-wrapper">
+        <div id="projects" class="projects-wrapper scroll-active">
             <h2>My Projects</h2>
             <p style="margin-top: 1rem;">Showcasing complete projects demonstrates what i can bring to your project.</p>
             <div class="projects-container">
                 <div class="project-1">
                     <img src="./Images/project-img.png" alt="project-img">
                     <h3>CyberStore</h3>
-                    <p>An E Commerce application that consists of an e-shop
+                    <p>An E Commerce website that consists of an e-shop
                         and managing payments through Paypal API.</p>
                     <div class="project-links-container">
                         <a class="demo-link" href="">Visit Project</a>
-                        <img class="git-link" src="./Images/git-black.png" alt="github-img">
+
+                        <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link"
+                                src="./Images/git-black.png" alt="github-img"></a>
+                        <a style="cursor: pointer;" class="demo-link modal-btn">More Info</a>
                     </div>
                     <img class="project-tech" style="width: 40px;" src="./Images/html.svg" alt="html-icon">
                     <img class="project-tech-1" src="./Images/css.svg" alt="css-icon">
@@ -120,10 +124,65 @@
                     <img src="./Images/project-img.png" alt="">
                 </div>
             </div>
+            <div class="modal-overlay">
+                <div class="modal-container">
+                    <div class="modal-container-1">
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <img src="./Images/pro1.png">
+                                <div class="text">Admin Dashboard</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <img src="./Images/pro2.png">
+                                <div class="text">Shop</div>
+                            </div>
+
+                            <div class="mySlides fade">
+                                <img src="./Images/pro3.png">
+                                <div class="text">Order Details</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./Images/pro4.png">
+                                <div class="text">Cart</div>
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="./Images/pro5.png">
+                                <div class="text">Build Your Custom Desktop</div>
+                            </div>
+
+                          
+                            <div style="text-align: center;margin-top: 0.5rem;">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                                <span class="dot" onclick="currentSlide(4)"></span>
+                                <span class="dot" onclick="currentSlide(5)"></span>
+                            </div>
+                        </div>
+
+
+                     
+
+                        <div class="project-info">
+                            <h1>CyberStore</h1>
+                            <p style="margin-top: 1rem;">This project was build during the time i was attending Bootcamp. The team consisted of me and four other people. I was in charge for the front end.</p>
+                            <p>Our app provides a fully functional <b>login system</b> and implements two <b>roles</b>. The roles of <b>admin</b> and <b>customer</b>. We have the
+                            option to <b>favourite products</b> , add them to <b>cart</b> and <b>pay</b> for them. Once we complete an order we have the option to view previous <b>order details</b> and the payment that was used.</p>
+                            <p>Cyberstore is built with ASP.NET MVC, C# and SQL. The front end was built with HTML CSS and Javascript. The database was built with SQL Server. Please visit the site and try it out.</p>
+                            <h3>Technologies:</h3>
+                            <p>C#, SQL, ASP.Net MVC, HTML, CSS, Javascript</p>
+                           
+                        </div>
+                        <button class="close-btn">&times;</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <section class="grey-section-1">
-            <div id="contact" class="contact-wrapper">
+            <div id="contact" class="contact-wrapper scroll-active">
                 <h2>CONTACT</h2>
+
                 <h3>LET'S KEEP IN TOUCH</h3>
                 <p>If you liked my work, send me an email.</p>
                 <div class="contact-form-container">
@@ -151,9 +210,9 @@
                         </div>
                     </div>
                     <form method="post" class="contact-form" action="send-email.php">
-                        <input placeholder="Your name" name="name" type="text">
-                        <input placeholder="Your email" name="email" type="email">
-                        <textarea name="message" placeholder="Your message"></textarea>
+                        <input required placeholder="Your name" name="name" type="text">
+                        <input required placeholder="Your email" name="email" type="email">
+                        <textarea required name="message" placeholder="Your message"></textarea>
                         <button type="submit">SEND</button>
                     </form>
                 </div>
