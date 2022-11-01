@@ -95,7 +95,22 @@ body {
 .main-img-wrapper {
   position: relative;
 }
-
+.main-img-content {
+  animation: page-load 300ms ease-in 600ms;
+  transform: translate(-20px);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes page-load {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .main-img-text img {
   width: 100%;
   height: 100vh;
@@ -331,10 +346,10 @@ body {
 .skills-desc {
   max-width: 75%;
 }
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
   .skills-desc {
-  max-width: none;
-}
+    max-width: none;
+  }
 }
 
 .cta-btn {
@@ -396,6 +411,7 @@ body {
 .projects-container img {
   width: 100%;
   object-fit: cover;
+  max-height: 25rem;
 }
 
 .projects-container h3 {
@@ -414,7 +430,10 @@ body {
 .git-link {
   width: 40px !important;
   cursor: pointer;
-  margin-left: 1rem;
+}
+.git-link:hover {
+  filter: invert(76%) sepia(53%) saturate(1564%) hue-rotate(330deg)
+    brightness(106%) contrast(101%);
 }
 
 .demo-link {
@@ -427,9 +446,52 @@ body {
   min-width: 125px;
   transition: all linear 0.3s;
 }
-
 .demo-link:hover {
-  background: #ffba3a;
+  background-color: black;
+}
+.more-info-link {
+  text-decoration: none;
+  background-color: #ffb03a;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 2em;
+  border: none;
+  min-width: 125px;
+  transition: all linear 0.3s;
+  cursor: pointer;
+  background-color: black;
+  transition: all linear 0.3s;
+}
+.more-info-link:hover {
+  background-color: #ffb03a;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .project-links-container {
@@ -475,7 +537,8 @@ body {
   left: -15px;
 }
 
-.modal-overlay {
+.modal-overlay,
+.modal-overlay-2 {
   position: fixed;
   top: 0;
   left: 0;
@@ -516,7 +579,8 @@ body {
   height: 60%;
 }
 
-.close-btn {
+.close-btn,
+.close-btn-2 {
   position: absolute;
   top: 0.5rem;
   right: 2rem;
@@ -537,7 +601,8 @@ body {
   width: 30%;
   width: 100%;
 }
-.dot {
+.dot,
+.dot-1 {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -557,10 +622,34 @@ body {
   max-height: 340px;
   width: 100%;
 }
-
-.active,
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: #ffb03a;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.activeDot,
 .dot:hover {
-  background-color: #717171;
+  background-color: #ffb03a;
+}
+.active a {
+  color: #ffb03a;
 }
 
 .fade {
@@ -574,17 +663,17 @@ body {
     height: 90%;
   }
   .mySlides img {
-  object-fit: contain;
-  max-height: 240px;
-  width: 100%;
-}
-.close-btn{
-  top: 0;
-  right: 1rem;
-}
-.project-info{
-  margin: auto;
-}
+    object-fit: contain;
+    max-height: 240px;
+    width: 100%;
+  }
+  .close-btn {
+    top: 0;
+    right: 1rem;
+  }
+  .project-info {
+    margin: auto;
+  }
 }
 
 @keyframes fade {
@@ -710,9 +799,6 @@ body {
 }
 
 .active-link.links {
-  color: #ffb03a;
-}
-.active-link.scroll-active {
   color: #ffb03a;
 }
 

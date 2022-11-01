@@ -17,11 +17,11 @@
 <body>
     <div class="sidebar">
         <ul>
-            <li><a class="links" href="#home">HOME</a></li>
-            <li><a class="links" href="#about">ABOUT ME</a></li>
-            <li><a class="links" href="#skills">SKILLS</a></li>
-            <li><a class="links" href="#projects">PROJECTS</a></li>
-            <li><a class="links" href="#contact">CONTACT</a></li>
+            <li class="list"><a class="links" href="#home">HOME</a></li>
+            <li class="list"><a class="links" href="#about">ABOUT ME</a></li>
+            <li class="list"><a class="links" href="#skills">SKILLS</a></li>
+            <li class="list"><a class="links" href="#projects">PROJECTS</a></li>
+            <li class="list"><a class="links" href="#contact">CONTACT</a></li>
         </ul>
         <div class="sidebar-footer">
             <p>&copy; Aristeidis Lamprinidis</p>
@@ -35,12 +35,12 @@
         </div>
     </div>
     <div class="wrapper">
-        <div id="home" class="main-img-wrapper scroll-active">
+        <section id="home" class="main-img-wrapper">
             <div class="main-img-text">
                 <img class="main-img" src="./Images/pc2.jpg" alt="">
                 <div class="main-img-content">
                     <p>HELLO, I'M</p>
-                    <h2>ARISTEIDIS</h2>
+                    <h2 style="color: #FFB03A">ARISTEIDIS</h2>
                     <h2 style="color: #FFB03A">LAMPRINIDIS</h2>
                     <div class="main-img-job-title">
                         <h3>Web Developer</h3>
@@ -48,9 +48,8 @@
                     <a class="links hire-me-btn" href="#contact">Hire Me</a>
                 </div>
             </div>
-        </div>
-
-        <div id="about" class="about-me-wrapper scroll-active">
+        </section>
+        <section id="about" class="about-me-wrapper">
             <h2>About Me</h2>
             <div class="about-me-wrapper-1">
                 <img class="avatar-img" src="./Images/face.jpg" alt="about-image">
@@ -75,13 +74,13 @@
                     next project.</p>
             </div>
             <a href="test.pdf" download="Aristeidis-Lamprinidis-Resume" class="download-btn">Download Resume as PDF</a>
-        </div>
-        <section class="grey-section">
-            <div id="skills" class="skills-wrapper scroll-active">
+        </section>
+        <section id="skills" class="grey-section">
+            <div class="skills-wrapper scroll-active">
                 <div class="skills-desc">
                     <h2>Skills</h2>
-                    <p>I am a creative problem solver. I build fullstack web applications. I use C#, SQL, ASP.net,
-                        Javascript, React, Bootstrap, HTML, CSS and PHP. I have highlighted my key technical skills that
+                    <p>I am a creative problem solver. I build fullstack web applications. I use <b>C#, SQL, ASP.net,
+                            Javascript, React, Bootstrap, HTML, CSS</b>. I have highlighted my key technical skills that
                         i will bring to your project.</p>
                 </div>
                 <div class="skills-slideshow slider">
@@ -98,7 +97,7 @@
                 <a href="#projects" class="cta-btn links">Check Out My Projects</a>
             </div>
         </section>
-        <div id="projects" class="projects-wrapper scroll-active">
+        <section id="projects" class="projects-wrapper">
             <h2>My Projects</h2>
             <p style="margin-top: 1rem;">Showcasing complete projects demonstrates what i can bring to your project.</p>
             <div class="projects-container">
@@ -108,11 +107,16 @@
                     <p>An E Commerce website that consists of an e-shop
                         and managing payments through Paypal API.</p>
                     <div class="project-links-container">
-                        <a class="demo-link" href="">Visit Project</a>
+                        <a class="more-info-link modal-btn">More Info</a>
+                        <div class="tooltip">
+                            <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link"
+                                    src="./Images/git-black.png" alt="github-img"></a>
+                            <span class="tooltiptext">
+                                <h5>View Source Code</h5>
+                            </span>
+                        </div>
+                        <a class="demo-link" href="">Live Demo</a>
 
-                        <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link"
-                                src="./Images/git-black.png" alt="github-img"></a>
-                        <a style="cursor: pointer;" class="demo-link modal-btn">More Info</a>
                     </div>
                     <img class="project-tech" style="width: 40px;" src="./Images/html.svg" alt="html-icon">
                     <img class="project-tech-1" src="./Images/css.svg" alt="css-icon">
@@ -120,8 +124,26 @@
                     <img class="project-tech-3" src="./Images/c.png" alt="c-icon">
                     <span class="sql-icon project-tech-4">SQL</span>
                 </div>
-                <div>
-                    <img src="./Images/project-img.png" alt="">
+                <div class="project-1">
+                    <img height="100%" src="./Images/localhost_3000_.png" alt="project-img">
+                    <h3>Top News</h3>
+                    <p>Top News provides information about the latest news in Greece and around the world.</p>
+                    <div class="project-links-container">
+                        <a class="more-info-link modal-btn-2">More Info</a>
+                        <div class="tooltip">
+                            <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link"
+                                    src="./Images/git-black.png" alt="github-img"></a>
+                            <span class="tooltiptext">
+                                <h5>View Source Code</h5>
+                            </span>
+                        </div>
+                        <a class="demo-link" href="">Live Demo</a>
+
+                    </div>
+                    <img class="project-tech" style="width: 40px;" src="./Images/html.svg" alt="html-icon">
+                    <img class="project-tech-1" src="./Images/css.svg" alt="css-icon">
+                    <img class="project-tech-2" src="./Images/js.svg" alt="js-icon">
+                    <img width="10px" class="project-tech-3" src="./Images/react.svg" alt="c-icon">
                 </div>
             </div>
             <div class="modal-overlay">
@@ -151,7 +173,7 @@
                                 <div class="text">Build Your Custom Desktop</div>
                             </div>
 
-                          
+
                             <div style="text-align: center;margin-top: 0.5rem;">
                                 <span class="dot" onclick="currentSlide(1)"></span>
                                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -159,28 +181,69 @@
                                 <span class="dot" onclick="currentSlide(4)"></span>
                                 <span class="dot" onclick="currentSlide(5)"></span>
                             </div>
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
                         </div>
-
-
-                     
-
                         <div class="project-info">
                             <h1>CyberStore</h1>
-                            <p style="margin-top: 1rem;">This project was build during the time i was attending Bootcamp. The team consisted of me and four other people. I was in charge for the front end.</p>
-                            <p>Our app provides a fully functional <b>login system</b> and implements two <b>roles</b>. The roles of <b>admin</b> and <b>customer</b>. We have the
-                            option to <b>favourite products</b> , add them to <b>cart</b> and <b>pay</b> for them. Once we complete an order we have the option to view previous <b>order details</b> and the payment that was used.</p>
-                            <p>Cyberstore is built with ASP.NET MVC, C# and SQL. The front end was built with HTML CSS and Javascript. The database was built with SQL Server. Please visit the site and try it out.</p>
+                            <p style="margin-top: 1rem;">This project was build during the time i was attending
+                                Bootcamp. The team consisted of me and four other developers. I was in charge for the
+                                front
+                                end.</p>
+                            <p>Our app provides a fully functional <b>login system</b> and implements two <b>roles</b>.
+                                The roles of <b>admin</b> and <b>customer</b>. We have the
+                                option to <b>favourite products</b> , add them to <b>cart</b> and <b>pay</b> for them.
+                                Once we complete an order we have the option to view previous <b>order details</b> and
+                                the payment that was used.</p>
+                            <p>Cyberstore is built with ASP.NET MVC, C# and SQL. The front end was built with HTML CSS
+                                and Javascript. The database was built with SQL Server. Please visit the site and try it
+                                out.</p>
                             <h3>Technologies:</h3>
                             <p>C#, SQL, ASP.Net MVC, HTML, CSS, Javascript</p>
-                           
+
                         </div>
                         <button class="close-btn">&times;</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <section class="grey-section-1">
-            <div id="contact" class="contact-wrapper scroll-active">
+            <div class="modal-overlay-2">
+                <div class="modal-container">
+                    <div class="modal-container-1">
+                        <div style="margin-right: 2rem;" class="slideshow-container">
+                            <div class="mySlides-1 fade">
+                                <img style="max-height:20rem;object-fit: contain;" width="100%" src="./Images/topNews.png">
+                                <div class="text">Home</div>
+                            </div>
+            
+                            <div class="mySlides-1 fade">
+                                <img style="max-height:20rem;object-fit: contain;" width="100%" src="./Images/search.png">
+                                <div class="text">Search</div>
+                            </div>
+
+                            <div style="text-align: center;margin-top: 0.5rem;">
+                                <span class="dot-1" onclick="currentSlide1(1)"></span>
+                                <span class="dot-1" onclick="currentSlide1(2)"></span>
+                            </div>
+                            <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+                        </div>
+                        <div class="project-info">
+                            <h1>Top News</h1>
+                            <p style="margin-top: 1rem;">
+                                Top News is a website for retrieving the latest news in Greece and around the world. The project's purpose was to test my overall knowledge in React and API.
+                            </p>
+                            <p>The data is being obtained from <b><a href="https://newsapi.org/" style="color: black;" target="_blank">https://newsapi.org</a></b>. Apart from showing the <b>news</b>, we have the option to <b>filter</b> out those we are not interested in. Finally our website with the help of the API provides a fully functional <b>search system</b>, for searching international news. Please visit the site and try it out.</p>
+                            <h3>Technologies:</h3>
+                            <p>React, HTML, CSS, Javascript</p>
+            
+                        </div>
+                        <button class="close-btn-2">&times;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="grey-section-1">
+            <div class="contact-wrapper">
                 <h2>CONTACT</h2>
 
                 <h3>LET'S KEEP IN TOUCH</h3>
