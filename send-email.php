@@ -1,7 +1,7 @@
 <?php
 
 $name = $_POST["name"];
-$email = $_POST["email"];
+$email = 'zero@yahoo.com';
 $message = $_POST["message"];
 $subject = "Hello World";
 
@@ -11,7 +11,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
 $mail = new PHPMailer(true);
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
 $mail->isSMTP();
 $mail->SMTPAuth = true;

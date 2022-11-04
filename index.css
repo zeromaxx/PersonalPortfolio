@@ -567,6 +567,7 @@ body {
 
 .modal-container {
   background: white;
+  background-color: white;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -796,6 +797,7 @@ body {
   align-items: center;
   background-color: #f7f7f7;
   min-height: 100vh;
+  position: relative;
 }
 
 .active-link.links {
@@ -813,7 +815,22 @@ body {
   font-size: 0.7rem;
   line-height: 30px;
 }
-
+.git-social {
+  filter: invert(0%) sepia(0%) saturate(8%) hue-rotate(145deg) brightness(94%)
+    contrast(102%);
+}
+.email-sent {
+  text-decoration: none;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  background-color: #ffb03a;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 2em;
+  border: none;
+  min-width: 125px;
+}
 @media (max-width: 1200px) {
   .sidebar {
     left: -230px;
