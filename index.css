@@ -204,6 +204,7 @@ body {
 .about-me-wrapper-1 {
   display: flex;
   margin-top: 2.5rem;
+  height: 70vh;
 }
 
 .avatar-img {
@@ -498,6 +499,7 @@ body {
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
+  max-height: 3rem;
 }
 
 .project-1 {
@@ -858,7 +860,7 @@ body {
   }
 
   .hire-me-btn {
-    margin-top: 2rem;
+    margin-top:0.4rem;
   }
 
   .wrapper {
@@ -868,6 +870,7 @@ body {
 
   .about-me-wrapper-1 {
     display: block;
+    height: 100%;
   }
 
   .about-me-info {
