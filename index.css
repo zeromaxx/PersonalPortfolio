@@ -384,6 +384,7 @@ body {
   width: 100%;
   max-width: 80%;
   margin: auto;
+  margin-bottom: 5rem;
 }
 
 .projects-wrapper h2 {
@@ -411,8 +412,8 @@ body {
 
 .projects-container img {
   width: 100%;
-  object-fit: cover;
-  max-height: 25rem;
+  /* object-fit: contain; */
+  /* max-height: 25rem; */
 }
 
 .projects-container h3 {
@@ -504,6 +505,9 @@ body {
 
 .project-1 {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-tech {
