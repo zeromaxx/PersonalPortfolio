@@ -59,10 +59,8 @@
                         </span></p>
                     <p>Phone : <span>6937040151</span></p>
                     <p>City : <span>Athens</span></p>
-                    <p>Github : <a target="_blank" href="https://github.com/zeromaxx"><img width="25px"
-                                src="./Images/github.svg" alt="github"></a></p>
-                    <p>LinkedIn : <a target="_blank" href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img
-                                width="25px" src="./Images/linkedin.svg" alt=""></a></p>
+                    <p>Github : <a target="_blank" href="https://github.com/zeromaxx"><img width="25px" src="./Images/github.svg" alt="github"></a></p>
+                    <p>LinkedIn : <a target="_blank" href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img width="25px" src="./Images/linkedin.svg" alt=""></a></p>
                 </div>
             </div>
             <div class="about-me-pitch">
@@ -73,7 +71,8 @@
                     business problems. Take a look at my portfolio work and lets see if we can work together on your
                     next project.</p>
             </div>
-            <a href="Aris_Lamprinidis_Resume .pdf" download="Aristeidis-Lamprinidis-Resume" class="download-btn">Download Resume as PDF</a>
+            <a href="Aris_Lamprinidis_Resume.pdf" download="Aristeidis-Lamprinidis-Resume" class="download-btn">Download
+                Resume as PDF</a>
         </section>
         <section id="skills" class="grey-section">
             <div class="skills-wrapper scroll-active">
@@ -105,45 +104,33 @@
                 <div class="project-1">
                     <img height="100%" style="object-fit: cover;" src="./Images/project-img.png" alt="project-img">
                     <h3>CyberStore</h3>
-                    <p>An e-commerce website that allows users to buy  computer hardware parts.</p>
+                    <p>An e-commerce website that allows users to buy computer hardware parts.</p>
                     <div class="project-links-container">
                         <a class="more-info-link modal-btn">More Info</a>
                         <div class="tooltip">
-                            <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link"
-                                    src="./Images/git-black.png" alt="github-img"></a>
+                            <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link" src="./Images/git-black.png" alt="github-img"></a>
                             <span class="tooltiptext">
                                 <h5>View Source Code</h5>
                             </span>
                         </div>
-                        <a class="demo-link" href="">Live Demo</a>
+                        <a target="_blank" class="demo-link" href="http://arislamprinidis-001-site1.atempurl.com/">Live Demo</a>
 
                     </div>
-                    <!-- <img class="project-tech" style="width: 40px;" src="./Images/html.svg" alt="html-icon">
-                    <img class="project-tech-1" src="./Images/css.svg" alt="css-icon">
-                    <img class="project-tech-2" src="./Images/js.svg" alt="js-icon">
-                    <img class="project-tech-3" src="./Images/c.png" alt="c-icon">
-                    <span class="sql-icon project-tech-4">SQL</span> -->
                 </div>
                 <div class="project-1">
-                    <img  src="./Images/topNews.png" alt="project-img">
+                    <img src="./Images/topNews.png" alt="project-img">
                     <h3>Top News</h3>
-                    <p>Top News provides information about the latest news in Greece and around the world.</p>
+                    <p>Top News provides information about the latest news <br>around the world.</p>
                     <div class="project-links-container">
                         <a class="more-info-link modal-btn-2">More Info</a>
                         <div class="tooltip">
-                            <a href="https://github.com/zeromaxx/topNews" target="_blank"><img class="git-link"
-                                    src="./Images/git-black.png" alt="github-img"></a>
+                            <a href="https://github.com/zeromaxx/topNews" target="_blank"><img class="git-link" src="./Images/git-black.png" alt="github-img"></a>
                             <span class="tooltiptext">
                                 <h5>View Source Code</h5>
                             </span>
                         </div>
-                        <a class="demo-link" href="">Live Demo</a>
-
+                        <a target="_bkank" class="demo-link" href="https://topnews-production.up.railway.app/">Live Demo</a>
                     </div>
-                    <!-- <img class="project-tech" style="width: 40px;" src="./Images/html.svg" alt="html-icon">
-                    <img class="project-tech-1" src="./Images/css.svg" alt="css-icon">
-                    <img class="project-tech-2" src="./Images/js.svg" alt="js-icon">
-                    <img width="10px" class="project-tech-3" src="./Images/react.svg" alt="c-icon"> -->
                 </div>
             </div>
             <div class="modal-overlay">
@@ -194,7 +181,9 @@
                                 The roles of <b>admin</b> and <b>customer</b>. Users have the
                                 option to <b>favourite products</b> , add them to <b>cart</b> and <b>pay</b> for them.
                                 Once we complete an order we have the option to view previous <b>order details</b> and
-                                the payment that was used. <b>Admin</b> has his own <b>dashboard</b>, where he can analyze the performance of the website with the help of <b>charts</b>, <b>insert new products</b> and change user roles.</p>
+                                the payment that was used. <b>Admin</b> has his own <b>dashboard</b>, where he can
+                                analyze the performance of the website with the help of <b>charts</b>, <b>insert new
+                                    products</b> and change user roles.</p>
                             <p>Cyberstore is built with ASP.NET MVC, C# and SQL. The front end was built with HTML CSS
                                 and Javascript. The database was built with SQL Server. Please visit the site and try it
                                 out.</p>
@@ -211,14 +200,12 @@
                     <div class="modal-container-1">
                         <div style="margin-right: 2rem;" class="slideshow-container">
                             <div class="mySlides-1 fade">
-                                <img style="max-height:280px;object-fit: contain;" width="100%"
-                                    src="./Images/homeNews.png">
+                                <img style="max-height:280px;object-fit: contain;" width="100%" src="./Images/homeNews.png">
                                 <div class="text">Home</div>
                             </div>
 
                             <div class="mySlides-1 fade">
-                                <img style="max-height:280px;object-fit: contain;" width="100%"
-                                    src="./Images/newsSearch.png">
+                                <img style="max-height:280px;object-fit: contain;" width="100%" src="./Images/newsSearch.png">
                                 <div class="text">Search News</div>
                             </div>
 
@@ -232,11 +219,11 @@
                         <div style="letter-spacing: 0.5px;" class="project-info">
                             <h1>Top News</h1>
                             <p>
-                                Top News is a website for retrieving the latest news in Greece and around the world. The
+                                Top News is a website for retrieving the latest news around the world. The
                                 project's purpose was to test my overall knowledge in React and API.
                             </p>
-                            <p>The data is being obtained from <b><a href="https://newsapi.org/" style="color: black;"
-                                        target="_blank">https://newsapi.org</a></b>. Apart from showing the news, we
+                            <p>The data is being obtained from <b><a href="https://developer.nytimes.com/apis/" style="color: black;" target="_blank">https://developer.nytimes.com/apis</a></b>. Apart from showing
+                                the news, we
                                 have the option to <b>filter news</b> we are not interested in. Finally our website with
                                 the help of the API provides a fully functional <b>search system</b>, for searching
                                 international news. Please visit the site and try it out.</p>
@@ -291,21 +278,23 @@
         </section>
     </div>
     <script src="index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         const submitBtn = document.querySelector('#submitBtn');
         $(document).ready(() => {
             $('.email-sent').hide();
-            $(".contact-form").submit(function (e) {
+            $(".contact-form").submit(function(e) {
                 e.preventDefault();
-                             submitBtn.disabled = true;
+                submitBtn.disabled = true;
                 submitBtn.style.opacity = '0.5';
                 $.ajax({
                     method: "post",
                     url: "send-email.php",
-                    data: { name: $('#name-text').val(), message: $('#msg-text').val() },
-                    success: function (response) {
+                    data: {
+                        name: $('#name-text').val(),
+                        message: $('#msg-text').val()
+                    },
+                    success: function(response) {
                         $('.email-sent').show();
                         $(".contact-form").trigger("reset");
                         submitBtn.disabled = false;

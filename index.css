@@ -583,7 +583,7 @@ body {
 .modal-container-1 {
   width: 75%;
   display: flex;
-  height: 60%;
+  height: 50%;
 }
 
 .close-btn,
@@ -864,7 +864,7 @@ body {
   }
 
   .hire-me-btn {
-    margin-top:0.4rem;
+    margin-top: 0.4rem;
   }
 
   .wrapper {
