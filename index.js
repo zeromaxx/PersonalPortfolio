@@ -5,18 +5,6 @@ const scrollLinks = document.querySelectorAll(".links");
 const hireBtn = document.querySelector(".hire-me-btn");
 const ctaBtn = document.querySelector(".cta-btn");
 
-ctaBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  const id = e.currentTarget.getAttribute("href").slice(1);
-  const element = document.getElementById(id);
-  let position = element.offsetTop;
-
-  window.scrollTo({
-    left: 0,
-    top: position,
-  });
-});
-
 hireBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const id = e.currentTarget.getAttribute("href").slice(1);
