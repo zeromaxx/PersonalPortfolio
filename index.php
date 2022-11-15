@@ -56,10 +56,10 @@
                 <img class="avatar-img" src="./Images/face1.jpg" alt="about-image">
                 <div class="about-me-info">
                     <h4>Who am i?</h4>
-                    <h3 >I'm Aris Lamprinidis, a FullStack Web Developer</h3>
-                    <p >I am a full stack software developer based in Athens and i help organizations
-                        leverage software technologies by turning their ideas into well-developed solutions for their
-                        business problems. Take a look at my portfolio work and lets see if we can work together on your
+                    <h3 >I'm Aris Lamprinidis, a FullStack Web <br> Developer</h3>
+                    <p >I am a full stack software developer based in Athens and i help organizations <br>
+                        leverage software technologies by turning their ideas into well-developed <br> solutions for their
+                        business problems. Take a look at my portfolio work and lets <br> see if we can work together on your
                         next project.</p>
                     <div class="about-me-info-1">
                         <h5>Github: <span><a target="_blank" href="https://github.com/zeromaxx"><img width="25px" src="./Images/github.svg"

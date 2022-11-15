@@ -210,21 +210,19 @@ body {
 .avatar-img {
   border: 3px solid #ffb03a;
   object-fit: cover;
+  
 }
 .about-me-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* justify-content: space-around; */
   margin-left: 2.5rem;
   line-height: 1.5;
 }
 
 .download-btn {
-  /* margin: 15px 0px; */
   margin-top: 2rem;
   display: block;
-  /* width: 50%; */
   width: fit-content;
   padding: 10px 15px;
   color: #fff;
@@ -246,14 +244,14 @@ body {
 }
 .about-me-info p {
   padding-bottom: 2rem;
- border-bottom: 1px solid #e5e7f2;
+  border-bottom: 1px solid #e5e7f2;
 }
-.about-me-info span{
+.about-me-info span {
   vertical-align: middle;
   margin-left: 0.3rem;
 }
-.about-me-info h5{
-  margin-top: 1rem;
+.about-me-info h5 {
+  margin-top: 0.5rem;
 }
 
 .about-me-info h3 {
@@ -338,12 +336,9 @@ body {
     width: 100%;
     margin-bottom: 1rem;
   }
-  .about-me-info {
-  line-height: 0.2;
-}
-.d1,.d2{
-  width: 100% !important;
-}
+  .download-btn {
+    padding: 8px 15px;
+  }
 }
 
 .cta-btn {
@@ -872,7 +867,6 @@ body {
 
   .about-me-info {
     margin: auto;
-    line-height: 2.5rem;
   }
 
   .about-me-pitch,
@@ -880,8 +874,7 @@ body {
     width: 100%;
   }
 
-  .avatar-img,
-  .download-btn {
+  .avatar-img {
     width: 100%;
   }
 
@@ -896,5 +889,15 @@ body {
 
   .contact-form-container {
     display: block;
+  }
+}
+
+@media (min-width:1200px) and (max-width:1650px){
+  .about-me-info h3,.about-me-info h4{
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+   .about-me-info p{
+    font-size: 0.8rem;
   }
 }
