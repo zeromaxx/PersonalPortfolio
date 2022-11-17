@@ -68,7 +68,7 @@
                     </div>
                     <h5>LinkedIn: <span><a target="_blank" href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img width="25px"
                             src="./Images/linkedin.svg" alt=""></a></span></h5>
-                            <h5>Phone: <span style="font-weight: 400;">693740151</span></h5>
+                            <h5>Phone: <span style="font-weight: 400;">6937040151</span></h5>
                     <a href="Aris_Lamprinidis_Resume.pdf" download="Aristeidis-Lamprinidis-Resume"
                         class="download-btn">Download
                         Resume</a>
