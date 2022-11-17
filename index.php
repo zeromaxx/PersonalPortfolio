@@ -223,7 +223,7 @@
                                 and Javascript. The database was built with SQL Server. Please visit the site and try it
                                 out.</p>
                             <h3>Technologies:</h3>
-                            <p>C#, SQL, ASP.Net MVC, HTML, CSS, Javascript</p>
+                            <p>C#, SQL, ASP.Net MVC, HTML, CSS, Javascript, Jquery</p>
 
                         </div>
                         <button class="close-btn">&times;</button>
