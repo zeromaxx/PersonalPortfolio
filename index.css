@@ -118,7 +118,7 @@ body {
   object-fit: cover;
 }
 
-.main-img-text::after {
+/* .main-img-text::after {
   position: absolute;
   content: "";
   display: block;
@@ -129,6 +129,21 @@ body {
   width: 100%;
   height: 100%;
   z-index: 5;
+} */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: none;
 }
 
 .main-img-content {
@@ -210,7 +225,6 @@ body {
 .avatar-img {
   border: 3px solid #ffb03a;
   object-fit: cover;
-  
 }
 .about-me-info {
   display: flex;
@@ -892,12 +906,13 @@ body {
   }
 }
 
-@media (min-width:1200px) and (max-width:1650px){
-  .about-me-info h3,.about-me-info h4{
+@media (min-width: 1200px) and (max-width: 1650px) {
+  .about-me-info h3,
+  .about-me-info h4 {
     font-size: 1.3rem;
     line-height: 1.2;
   }
-   .about-me-info p{
+  .about-me-info p {
     font-size: 0.8rem;
   }
 }

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
-<body>
+<body onload="loadOverlay()">
     <div class="sidebar">
         <ul>
             <li class="list"><a class="links" href="#home">HOME</a></li>
@@ -48,6 +48,7 @@
                     </div>
                     <a class="links hire-me-btn" href="#contact">Hire Me</a>
                 </div>
+                <div class="overlay"></div>
             </div>
         </section>
         <section id="about" class="about-me-wrapper">
@@ -56,19 +57,22 @@
                 <img class="avatar-img" src="./Images/face1.jpg" alt="about-image">
                 <div class="about-me-info">
                     <h4>Who am i?</h4>
-                    <h3 >I'm Aris Lamprinidis, a FullStack Web <br> Developer</h3>
-                    <p >I am a full stack software developer based in Athens and i help organizations <br>
-                        leverage software technologies by turning their ideas into well-developed <br> solutions for their
-                        business problems. Take a look at my portfolio work and lets <br> see if we can work together on your
+                    <h3>I'm Aris Lamprinidis, a FullStack Web <br> Developer</h3>
+                    <p>I am a full stack software developer based in Athens and i help organizations <br>
+                        leverage software technologies by turning their ideas into well-developed <br> solutions for
+                        their
+                        business problems. Take a look at my portfolio work and lets <br> see if we can work together on
+                        your
                         next project.</p>
                     <div class="about-me-info-1">
-                        <h5>Github: <span><a target="_blank" href="https://github.com/zeromaxx"><img width="25px" src="./Images/github.svg"
-                                        alt="github"></a></span></h5>
-                       
+                        <h5>Github: <span><a target="_blank" href="https://github.com/zeromaxx"><img width="25px"
+                                        src="./Images/github.svg" alt="github"></a></span></h5>
+
                     </div>
-                    <h5>LinkedIn: <span><a target="_blank" href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img width="25px"
-                            src="./Images/linkedin.svg" alt=""></a></span></h5>
-                            <h5>Phone: <span style="font-weight: 400;">6937040151</span></h5>
+                    <h5>LinkedIn: <span><a target="_blank"
+                                href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img width="25px"
+                                    src="./Images/linkedin.svg" alt=""></a></span></h5>
+                    <h5>Phone: <span style="font-weight: 400;">6937040151</span></h5>
                     <a href="Aris_Lamprinidis_Resume.pdf" download="Aristeidis-Lamprinidis-Resume"
                         class="download-btn">Download
                         Resume</a>

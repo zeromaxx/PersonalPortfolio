@@ -4,6 +4,7 @@ const sidebar = document.querySelector(".sidebar");
 const scrollLinks = document.querySelectorAll(".links");
 const hireBtn = document.querySelector(".hire-me-btn");
 const ctaBtn = document.querySelector(".cta-btn");
+const overlay = document.querySelector(".overlay");
 
 hireBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -16,6 +17,9 @@ hireBtn.addEventListener("click", (e) => {
     top: position,
   });
 });
+function loadOverlay() {
+  overlay.style.display = "block";
+}
 
 sidebar.addEventListener("click", function (e) {
   e.preventDefault();
@@ -120,7 +124,6 @@ function showSlides1(n) {
   slides[slideIndex1 - 1].style.display = "block";
   dots[slideIndex1 - 1].className += " activeDot";
 }
-
 
 let section = document.querySelectorAll("section");
 let lists = document.querySelectorAll(".list");
