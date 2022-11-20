@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
-<body onload="loadOverlay()">
+<body>
     <div class="sidebar">
         <ul>
             <li class="list"><a class="links" href="#home">HOME</a></li>
@@ -65,16 +65,12 @@
                         your
                         next project.</p>
                     <div class="about-me-info-1">
-                        <h5>Github: <span><a target="_blank" href="https://github.com/zeromaxx"><img width="25px"
-                                        src="./Images/github.svg" alt="github"></a></span></h5>
+                        <h5>Github: <span><a target="_blank" href="https://github.com/zeromaxx"><img width="25px" src="./Images/github.svg" alt="github"></a></span></h5>
 
                     </div>
-                    <h5>LinkedIn: <span><a target="_blank"
-                                href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img width="25px"
-                                    src="./Images/linkedin.svg" alt=""></a></span></h5>
+                    <h5>LinkedIn: <span><a target="_blank" href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img width="25px" src="./Images/linkedin.svg" alt=""></a></span></h5>
                     <h5>Phone: <span style="font-weight: 400;">6937040151</span></h5>
-                    <a href="Aris_Lamprinidis_Resume.pdf" download="Aristeidis-Lamprinidis-Resume"
-                        class="download-btn">Download
+                    <a href="Aris_Lamprinidis_Resume.pdf" download="Aristeidis-Lamprinidis-Resume" class="download-btn">Download
                         Resume</a>
 
                 </div>
@@ -143,8 +139,7 @@
                     <div class="project-links-container">
                         <a class="more-info-link modal-btn">More Info</a>
                         <div class="tooltip">
-                            <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link"
-                                    src="./Images/git-black.png" alt="github-img"></a>
+                            <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link" src="./Images/git-black.png" alt="github-img"></a>
                             <span class="tooltiptext">
                                 <h5>View Source Code</h5>
                             </span>
@@ -161,8 +156,7 @@
                     <div class="project-links-container">
                         <a class="more-info-link modal-btn-2">More Info</a>
                         <div class="tooltip">
-                            <a href="https://github.com/zeromaxx/topNews" target="_blank"><img class="git-link"
-                                    src="./Images/git-black.png" alt="github-img"></a>
+                            <a href="https://github.com/zeromaxx/topNews" target="_blank"><img class="git-link" src="./Images/git-black.png" alt="github-img"></a>
                             <span class="tooltiptext">
                                 <h5>View Source Code</h5>
                             </span>
@@ -239,14 +233,12 @@
                     <div class="modal-container-1">
                         <div style="margin-right: 2rem;" class="slideshow-container">
                             <div class="mySlides-1 fade">
-                                <img style="max-height:280px;object-fit: contain;" width="100%"
-                                    src="./Images/homeNews.png">
+                                <img style="max-height:280px;object-fit: contain;" width="100%" src="./Images/homeNews.png">
                                 <div class="text">Home</div>
                             </div>
 
                             <div class="mySlides-1 fade">
-                                <img style="max-height:280px;object-fit: contain;" width="100%"
-                                    src="./Images/newsSearch.png">
+                                <img style="max-height:280px;object-fit: contain;" width="100%" src="./Images/newsSearch.png">
                                 <div class="text">Search News</div>
                             </div>
 
@@ -263,9 +255,7 @@
                                 Top News is a website for retrieving the latest news around the world. The
                                 project's purpose was to test my overall knowledge in React and API.
                             </p>
-                            <p>The data is being obtained from <b><a href="https://developer.nytimes.com/apis/"
-                                        style="color: black;"
-                                        target="_blank">https://developer.nytimes.com/apis</a></b>. Apart from showing
+                            <p>The data is being obtained from <b><a href="https://developer.nytimes.com/apis/" style="color: black;" target="_blank">https://developer.nytimes.com/apis</a></b>. Apart from showing
                                 the news, we
                                 have the option to <b>filter news</b> we are not interested in. Finally our website with
                                 the help of the API provides a fully functional <b>search system</b>, for searching
@@ -321,13 +311,12 @@
         </section>
     </div>
     <script src="index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
         const submitBtn = document.querySelector('#submitBtn');
         $(document).ready(() => {
             $('.email-sent').hide();
-            $(".contact-form").submit(function (e) {
+            $(".contact-form").submit(function(e) {
                 e.preventDefault();
                 submitBtn.disabled = true;
                 submitBtn.style.opacity = '0.5';
@@ -338,7 +327,7 @@
                         name: $('#name-text').val(),
                         message: $('#msg-text').val()
                     },
-                    success: function (response) {
+                    success: function(response) {
                         $('.email-sent').show();
                         $(".contact-form").trigger("reset");
                         submitBtn.disabled = false;

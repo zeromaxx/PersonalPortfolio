@@ -17,9 +17,6 @@ hireBtn.addEventListener("click", (e) => {
     top: position,
   });
 });
-function loadOverlay() {
-  overlay.style.display = "block";
-}
 
 sidebar.addEventListener("click", function (e) {
   e.preventDefault();
