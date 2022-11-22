@@ -44,7 +44,7 @@
                     <h2 style="color: #FFB03A">ARIS</h2>
                     <h2 style="color: #FFB03A">LAMPRINIDIS</h2>
                     <div class="main-img-job-title">
-                        <h3>Full Stack Web Developer</h3>
+                        <h3>Web Developer</h3>
                     </div>
                     <a class="links hire-me-btn" href="#contact">Hire Me</a>
                 </div>
@@ -57,8 +57,8 @@
                 <img class="avatar-img" src="./Images/face1.jpg" alt="about-image">
                 <div class="about-me-info">
                     <h4>Who am i?</h4>
-                    <h3>I'm Aris Lamprinidis, a FullStack Web <br> Developer</h3>
-                    <p>I am a full stack software developer based in Athens and i help organizations <br>
+                    <h3>I'm Aris Lamprinidis, a Web <br> Developer</h3>
+                    <p>I am a web developer based in Athens and I help organizations <br>
                         leverage software technologies by turning their ideas into well-developed <br> solutions for
                         their
                         business problems. Take a look at my portfolio work and lets <br> see if we can work together on
@@ -70,8 +70,7 @@
                     </div>
                     <h5>LinkedIn: <span><a target="_blank" href="https://www.linkedin.com/in/aris-lamprinidis-aa7b81236/"><img width="25px" src="./Images/linkedin.svg" alt=""></a></span></h5>
                     <h5>Phone: <span style="font-weight: 400;">6937040151</span></h5>
-                    <a href="Aristeidis-Lamprinidis-Resume.pdf" download="Aristeidis-Lamprinidis-Resume" class="download-btn">Download
-                        Resume</a>
+                    <a href="#projects" class="download-btn">Check Out My Projects</a>
 
                 </div>
 
@@ -85,7 +84,7 @@
                     <p style="margin-top: 2rem;">I am a creative problem solver. I build fullstack web applications. I
                         have highlighted my key
                         technical skills that <br>
-                        i will bring to your project.</p>
+                        I will bring to your project.</p>
                     <div class="skills-container">
                         <div>
                             <i class="devicon-csharp-plain colored"></i>
@@ -130,7 +129,7 @@
         </section>
         <section id="projects" class="projects-wrapper">
             <h2>My Projects</h2>
-            <p style="margin-top: 1rem;">Showcasing complete projects demonstrates what i can bring to your project.</p>
+            <p style="margin-top: 1rem;">Showcasing complete projects demonstrates what I can bring to your project.</p>
             <div class="projects-container">
                 <div class="project-1">
                     <img height="100%" style="object-fit: cover;" src="./Images/project-img.png" alt="project-img">
@@ -206,7 +205,7 @@
                         </div>
                         <div class="project-info">
                             <h1>CyberStore</h1>
-                            <p style="margin-top: 1rem;">This project was build during the time i was attending
+                            <p style="margin-top: 1rem;">This project was build during the time I was attending
                                 Bootcamp. The team consisted of me and four other developers. I was in charge for the
                                 front
                                 end.</p>
