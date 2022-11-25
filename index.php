@@ -38,7 +38,7 @@
     <div class="wrapper">
         <section id="home" class="main-img-wrapper">
             <div class="main-img-text">
-                <img class="main-img" src="./Images/t.jpg" alt="">
+                <img class="main-img" src="./Images/pc1.jpg" alt="">
                 <div class="main-img-content">
                     <p>HELLO, I'M</p>
                     <h2 style="color: #FFB03A">ARIS</h2>
@@ -54,7 +54,9 @@
         <section id="about" class="about-me-wrapper">
             <h2>About Me</h2>
             <div class="about-me-wrapper-1">
-                <img class="avatar-img" src="./Images/face1.jpg" alt="about-image">
+                <div>
+                    <img class="avatar-img" src="./Images/face1.jpg" alt="about-image">
+                </div>
                 <div class="about-me-info">
                     <h4>Who am i?</h4>
                     <h3>I'm Aris Lamprinidis, a Web <br> Developer</h3>
@@ -107,7 +109,7 @@
                     </div>
                     <div class="skills-container">
                         <div>
-                            <img width="50px" src="./Images/pngwing.com.png" alt="">
+                            <img width="50px" src="./Images/pngwing.com.jpg" alt="">
                             <h3 style="margin-top: 1.3rem;">Database Development</h3>
                             <p>Database Development is critical to most projects. I use SQL to query data from the
                                 database.</p>
@@ -132,13 +134,13 @@
             <p style="margin-top: 1rem;">Showcasing complete projects demonstrates what I can bring to your project.</p>
             <div class="projects-container">
                 <div class="project-1">
-                    <img height="100%" style="object-fit: cover;" src="./Images/project-img.png" alt="project-img">
+                    <img height="100%" style="object-fit: cover;" src="./Images/project-img.jpg" alt="project-img">
                     <h3>CyberStore</h3>
                     <p>An e-commerce website that allows users to buy computer hardware parts.</p>
                     <div class="project-links-container">
                         <a class="more-info-link modal-btn">More Info</a>
                         <div class="tooltip">
-                            <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link" src="./Images/git-black.png" alt="github-img"></a>
+                            <a href="https://github.com/zeromaxx/Cyberstore" target="_blank"><img class="git-link" src="./Images/git-black.jpg" alt="github-img"></a>
                             <span class="tooltiptext">
                                 <h5>View Source Code</h5>
                             </span>
@@ -149,13 +151,13 @@
                     </div>
                 </div>
                 <div class="project-1">
-                    <img src="./Images/topNews.png" alt="project-img">
+                    <img src="./Images/topNews.jpg" alt="project-img">
                     <h3>Top News</h3>
                     <p>Top News provides information about the latest news <br>around the world.</p>
                     <div class="project-links-container">
                         <a class="more-info-link modal-btn-2">More Info</a>
                         <div class="tooltip">
-                            <a href="https://github.com/zeromaxx/topNews" target="_blank"><img class="git-link" src="./Images/git-black.png" alt="github-img"></a>
+                            <a href="https://github.com/zeromaxx/topNews" target="_blank"><img class="git-link" src="./Images/git-black.jpg" alt="github-img"></a>
                             <span class="tooltiptext">
                                 <h5>View Source Code</h5>
                             </span>
@@ -170,25 +172,25 @@
                     <div class="modal-container-1">
                         <div class="slideshow-container">
                             <div class="mySlides fade">
-                                <img src="./Images/pro1.png">
+                                <img src="./Images/pro1.jpg">
                                 <div class="text">Admin Dashboard</div>
                             </div>
 
                             <div class="mySlides fade">
-                                <img src="./Images/pro2.png">
+                                <img src="./Images/pro2.jpg">
                                 <div class="text">Shop</div>
                             </div>
 
                             <div class="mySlides fade">
-                                <img src="./Images/pro3.png">
+                                <img src="./Images/pro3.jpg">
                                 <div class="text">Order Details</div>
                             </div>
                             <div class="mySlides fade">
-                                <img src="./Images/pro4.png">
+                                <img src="./Images/pro4.jpg">
                                 <div class="text">Cart</div>
                             </div>
                             <div class="mySlides fade">
-                                <img src="./Images/pro5.png">
+                                <img src="./Images/pro5.jpg">
                                 <div class="text">Build Your Custom Desktop</div>
                             </div>
 
@@ -232,12 +234,12 @@
                     <div class="modal-container-1">
                         <div style="margin-right: 2rem;" class="slideshow-container">
                             <div class="mySlides-1 fade">
-                                <img style="max-height:280px;object-fit: contain;" width="100%" src="./Images/homeNews.png">
+                                <img style="max-height:280px;object-fit: contain;" width="100%" src="./Images/homeNews.jpg">
                                 <div class="text">Home</div>
                             </div>
 
                             <div class="mySlides-1 fade">
-                                <img style="max-height:280px;object-fit: contain;" width="100%" src="./Images/newsSearch.png">
+                                <img style="max-height:280px;object-fit: contain;" width="100%" src="./Images/newsSearch.jpg">
                                 <div class="text">Search News</div>
                             </div>
 
