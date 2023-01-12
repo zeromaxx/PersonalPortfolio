@@ -38,7 +38,7 @@
     <div class="wrapper">
         <section id="home" class="main-img-wrapper">
             <div class="main-img-text">
-                <img class="main-img" src="./Images/pc1.jpg" alt="">
+                <img class="main-img" src="./Images/pc.jpg" alt="">
                 <div class="main-img-content">
                     <p>HELLO, I'M</p>
                     <h2 style="color: #FFB03A">ARIS</h2>
@@ -48,7 +48,7 @@
                     </div>
                     <a class="links hire-me-btn" href="#contact">Hire Me</a>
                 </div>
-                <div class="overlay"></div>
+                <!-- <div class="overlay"></div> -->
             </div>
         </section>
         <section id="about" class="about-me-wrapper">
